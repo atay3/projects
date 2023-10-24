@@ -1,4 +1,8 @@
-** start of undefined **
+/*
+ * This file contains the code for a simple survey form.
+ */
+
+** start of HTML code **
 
 <!DOCTYPE html>
 <html lang="en">
@@ -47,9 +51,9 @@
   </body>
 </html>
 
-** end of undefined **
+** end of HTML code **
 
-** start of undefined **
+** start of CSS code **
 
 body {
   width: 100%;
@@ -114,5 +118,5 @@ input[type="submit"] {
   min-width: 300px;
 }
 
-** end of undefined **
+** end of CSS code **
 
