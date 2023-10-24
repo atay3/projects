@@ -1,0 +1,104 @@
+function convertToRoman(num) {
+  let roman = "";
+  
+  if (num >= 1000) {
+    let thousands = num - (num % 1000);
+    roman = convertThousands(thousands, roman);
+  }
+
+  if (num % 1000 >= 100) {
+    let hundreds = (num % 1000) - (num % 100);
+    roman = convertHundreds(hundreds, roman);
+  }
+
+  if (num % 100 >= 10) {
+    let tens = (num % 100) - (num % 10);
+    roman = convertTens(tens, roman);
+  }
+
+  if (num % 10 >= 1) {
+    let ones = num % 10;
+    roman = convertOnes(ones, roman);
+  }
+ 
+ return roman;
+}
+
+function convertThousands(thousands, roman) {
+  for (let i = 0; i < thousands/1000; i++) {
+    roman += "M";
+  }
+  return roman;
+}
+
+function convertHundreds(hundreds, roman) {
+  switch (hundreds) {
+    case 900:
+      roman += "CM";
+      break;
+    case 500:
+      roman += "D";
+      break;
+    case 400:
+      roman += "CD";
+      break;
+    default:
+      if (hundreds < 900 && hundreds > 500) {
+        roman += "D";
+        hundreds = hundreds - 500;
+      }
+      for (let i = 0; i < (hundreds/100); i++) {
+        roman += "C";
+      }
+  }
+  return roman;
+}
+
+function convertTens(tens, roman) {
+  switch(tens) {
+    case 90:
+      roman += "XC";
+      break;
+    case 50:
+      roman += "L";
+      break;
+    case 40:
+      roman += "XL";
+      break;
+    default:
+      if (tens < 90 && tens > 50) {
+        roman += "L";
+        tens = tens - 50;
+      }
+      for (let i = 0; i < (tens/10); i++) {
+        roman += "X";
+      }
+  }
+  return roman;
+}
+
+function convertOnes(ones, roman) {
+  switch(ones) {
+    case 9:
+      roman += "IX";
+      break;
+    case 5:
+      roman += "V";
+      break;
+    case 4:
+      roman += "IV";
+      break;
+    default:
+      if (ones < 9 && ones > 5) {
+        roman += "V";
+        ones = ones - 5;
+      }
+      for (let i = 0; i < ones; i++) {
+        roman += "I";
+      }
+  }
+  
+  return roman;
+}
+
+console.log(convertToRoman(3999));

@@ -1,0 +1,28 @@
+function palindrome(str) {
+  //removes all except alphanumeric characters
+  str = str.replace(/[^\w]|_/g, "");
+
+  //turn everything lowercase
+  str = str.toLowerCase();
+
+  if (str != "") {
+    //read string forwards and backwards
+    for (let i = 0; i < str.length; i++) {
+      //string is a palindrome
+      if (i == str.length - 1 - i) {
+        return true;
+      }
+
+      //string is not a palindrome
+      if (str.at(i) != str.at(str.length - 1 - i)) {
+        return false;
+      }
+    }
+  }
+
+  return true;
+}
+
+//palindrome("eye");
+console.log(palindrome("r'_ace C=ar"));
+console.log(palindrome("0_0 (: /-\ :) 0-0"));
