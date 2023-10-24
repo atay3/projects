@@ -1,3 +1,7 @@
+/*
+ * This function takes any number under 10,000 and
+ * converts the number into Roman numerals.
+ */
 function convertToRoman(num) {
   let roman = "";
   
@@ -24,6 +28,10 @@ function convertToRoman(num) {
  return roman;
 }
 
+/*
+ * This function converts the thousands place
+ * of a number into Roman numerals.
+ */
 function convertThousands(thousands, roman) {
   for (let i = 0; i < thousands/1000; i++) {
     roman += "M";
@@ -31,6 +39,10 @@ function convertThousands(thousands, roman) {
   return roman;
 }
 
+/*
+ * This function converts the hundreds place
+ * of a number into Roman numerals.
+ */
 function convertHundreds(hundreds, roman) {
   switch (hundreds) {
     case 900:
@@ -54,6 +66,10 @@ function convertHundreds(hundreds, roman) {
   return roman;
 }
 
+/*
+ * This function converts the tens place
+ * of a number into Roman numerals.
+ */
 function convertTens(tens, roman) {
   switch(tens) {
     case 90:
@@ -77,6 +93,10 @@ function convertTens(tens, roman) {
   return roman;
 }
 
+/*
+ * This function converts the ones place
+ * of a number into Roman numerals.
+ */
 function convertOnes(ones, roman) {
   switch(ones) {
     case 9:
