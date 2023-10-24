@@ -1,3 +1,7 @@
+/*
+ * This function returns whether or not a string is a palindrome.
+ * 
+ */
 function palindrome(str) {
   //removes all except alphanumeric characters
   str = str.replace(/[^\w]|_/g, "");
