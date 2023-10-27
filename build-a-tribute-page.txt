@@ -1,0 +1,124 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Character Tribute Page Project">
+    <title id="title">Percy Jackson</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <div class="divider">
+        <h1>Perseus "Percy" Jackson</h1>
+        <p class="character-alias">Son of Poseidon, Hero of Olympus</p>
+      </div>
+    </header>
+    <main id="main">
+      <figure id="img-div" class="img-div">
+        <img id="image" src="https://upload.wikimedia.org/wikipedia/en/d/db/Percy_Jackson_Portrait.jpg" alt="Percy with a sword and helmet" class="image">
+        <figcaption id="img-caption" class="img-caption">Percy at Camp Half-Blood after sword training</figcaption>
+      </figure>
+      <div class="background-display">
+        <h2>Here's a timeline of Percy's life:</h2>
+        <ul>
+          <li id="tribute-info"><span class="bold">August 18, 1993</span> - Percy Jackson is born</li>
+         <li id="tribute-info"><span class="bold">June 21, 2006</span> - He retrieves the Master Bolt for Zeus</li>
+         <li id="tribute-info"><span class="bold">June 18, 2007</span> - He finishes his odyssey in the Sea of Monsters</li>
+         <li id="tribute-info"><span class="bold">December 21, 2007</span> - He is declared the child of the Great Prophecy</li>
+         <li id="tribute-info"><span class="bold">June 5, 2008</span> - He joins Annabeth Chase, Grover Underwood, and Tyson on a quest into the Labyrinth to search for Daedalus</li>
+         <li id="tribute-info"><span class="bold">August 16, 2009 </span> - He joins his fellow demigods to fight in the Battle of Manhattan</li>
+         <li id="tribute-info"><span class="bold">August 18, 2009</span> - Percy and the Greek demigods defeats the Titans and save Olympus. The Second Olympian War ends and the Great Prophecy is fulfilled</li>
+         <li id="tribute-info"><span class="bold">December 14, 2009</span> - He goes missing</li>
+        </ul>
+      </div>
+      <div class="divider">
+        <h3>Read more about Percy Jackson on his <a id="tribute-link" target="_blank" href="https://riordan.fandom.com/wiki/Percy_Jackson">Wikipedia</a> page.</h2>
+      </div>
+    </main>
+  </body>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+.divider {
+  display: block;
+  background-color: #5f9383;
+  text-align: center;
+}
+
+.character-alias {
+  padding-bottom: 15px;
+}
+
+h1 {
+  padding-top: 15px;
+  letter-spacing: 1.15px;
+  margin-bottom: -5px;
+}
+
+.character-alias, h1 {
+  font-family: "Times New Roman";
+}
+
+.bold {
+  font-weight: 800;
+}
+
+.img-div {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  max-width: 100%;
+  max-height: 100%;
+  padding-bottom: 6px;
+  padding-top: 10px;
+}
+
+.img-caption {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+h2 {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+ul {
+  display: table;
+  margin: 0 auto;
+}
+
+li {
+  text-align: left;
+  font-size: 17px;
+}
+
+h3 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-top: 0;
+}
+
+.background-display {
+  display: block;
+  background-color: #b4c6c0;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  margin-bottom: 0;
+}
+
+** end of undefined **
+
