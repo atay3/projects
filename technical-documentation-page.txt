@@ -1,0 +1,155 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation Page</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main id="main-doc">
+      <header class="side-bar">
+        <nav id="navbar">
+          <ul class="tabs">
+            <header>JavaScript Docs</header>
+            <li><a class="nav-link" href="#introduction">Introduction</a></li>
+            <li><a class="nav-link" href="#declaring_variables">Declaring Variables</a></li>
+            <li><a class="nav-link" href="#variable_scope">Variable Scope</a></li>
+            <li><a class="nav-link" href="#data_types">Data Types</a></li>
+            <li><a class="nav-link" href="#reference">Reference</a></li>
+          </ul>
+        </nav>
+      </header>
+      <section class="main-section" id="introduction">
+        <header>Introduction</header>
+        <p>JavaScript is a cross-platform, object-oriented scripting language. Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control over them.</p>
+        <p>JavaScript contains a standard library of objects, such as Array, Date, and Math, and a core set of language elements such as operators, control structures, and statements. Core JavaScript can be extended for a variety of purposes by supplementing it with additional objects; for example:</p>
+        <ul>
+          <li>Client-side JavaScript extends the core language by supplying objects to control a browser and its Document Object Model (DOM). For example, client-side extensions allow an application to place elements on an HTML form and respond to user events such as mouse clicks, form input, and page navigation.</li>
+          <li>Server-side JavaScript extends the core language by supplying objects relevant to running JavaScript on a server. For example, server-side extensions allow an application to communicate with a database, provide continuity of information from one invocation to another of the application, or perform file manipulations on a server.</li>
+        </ul>
+      </section>
+      <section class="main-section" id="declaring_variables">
+        <header>Declaring Variables</header>
+        <p>You can declare a variable in three ways.</p>
+        <p>With the keyword var (local and global variables):</p>
+        <code>var x = 42</code>
+        <p>By simply assigning it a value:</p>
+        <code>x = 42</code>
+        <p>This always declares a global variable. It generates a strict JavaScript warning. You shouldn't use this variant.</p>
+        <p>With the keyword let (can be used to declare a block scope local variable):</p>
+        <code>let y = 13</code>
+        <p></p>
+      </section>
+      <section class="main-section" id="variable_scope">
+        <header>Variable Scope</header>
+        <p>When you declare a variable outside of any function, it is called a global variable, because it is available to any other code in the current document. When you declare a variable within a function, it is called a local variable, because it is available only within that function.</p>
+        <p>JavaScript before ECMAScript 2015 does not have block statement scope; rather, a variable declared within a block is local to the function (or global scope) that the block resides within. For example the following code will log 5, because the scope of x is the function (or global context) within which x is declared, not the block, which in this case is an if statement.</p>
+        <code>if (true) { var x = 5; } console.log(x); // 5</code>
+        <p>This behavior changes, when using the let declaration introduced in ECMAScript 2015.</p>
+        <code>if (true) { let y = 5; } console.log(y); // ReferenceError: y is
+not defined</code>
+        <p></p>
+      </section>
+      <section class="main-section" id="data_types">
+        <header>Data Types</header>
+        <p>The latest ECMAScript standard defines seven data types:</p>
+        <ul>
+          <li>Boolean</li>
+          <li>null</li>
+          <li>undefined</li>
+          <li>Number</li>
+          <li>String</li>
+          <li>Symbol</li>
+          <li>Object</li>
+        </ul>
+      </section>
+      <section class="main-section" id="reference">
+        <header>Reference</header>
+        <p>All the documentation in this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide">MDN</a></p>
+      </section>
+    </main>
+  </body>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+* {
+  font-family: arial;
+}
+
+header:not(.side-bar) {
+  text-align: left;
+  font-size: 28px;
+}
+
+main {
+  margin-left: 160px;
+  padding: 0px 10px;
+}
+
+nav {
+  width: 160px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+nav > ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-inline-start: 0;
+  margin-block: 0;
+  height: 60%;
+}
+
+nav > ul > li {
+  margin: 0 0.2rem;
+  padding: 0.2rem;
+  display: block;
+}
+
+nav > ul > .page-heading {
+  font-size: 28px;
+}
+
+nav > ul > li:not(.page-heading):hover {
+  background-color: #dfdfe2;
+  color: blue;
+  cursor: pointer;
+}
+
+li > a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p, ul:not(.tabs) {
+  color: #36454F;
+}
+
+code {
+  display: block;
+  background-color: #E5E4E2;
+  font-family: "courier new";
+  padding: 6px;
+  font-weight: normal;
+  font-size: 14px;
+  border-radius: 10px 10px 10px 10px
+}
+
+ @media (max-width: 500px) {
+   #navbar {
+     visibility: hidden;
+   }
+
+   main {
+     margin-left: 0;
+   }
+ }
