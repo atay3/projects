@@ -1,0 +1,23 @@
+//takes ROT13 encoded string as input and returns a decoded string (uppercase only)
+function rot13(str) {
+  let decodedStr = "";
+
+  //read each letter of str
+  for (let i = 0; i < str.length; i++) {
+    if (str.at(i).match(/[A-Z]/)) {
+      //A = 0, B = 1, ..., Z = 25
+      let code = str.charCodeAt(i) - 65;
+      let decodedLetter = ((code + 13) % 26) + 65;
+      decodedStr += String.fromCharCode(decodedLetter);
+    }
+    //dont change non-alphabetic characters
+    else {
+      decodedStr += str.at(i);
+    }
+  }
+
+  return decodedStr;
+}
+
+console.log(rot13("SERR PBQR PNZC"));
+console.log(rot13("SERR CVMMN!"));
